@@ -8,6 +8,7 @@
 module.exports = {
   root: true,
   parserOptions: {
+    project: './tsconfig.json',
     ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: {
@@ -22,10 +23,13 @@ module.exports = {
   ignorePatterns: ['!**/.server', '!**/.client'],
 
   // Base config
-  extends: 'airbnb',
+  extends: ['airbnb-base', 'airbnb-typescript/base'],
 
   // Rules
-  rules: { 'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }] },
+  rules: {
+    'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
+    'object-curly-newline': 'off',
+  },
 
   overrides: [
     // React

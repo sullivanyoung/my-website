@@ -2,6 +2,7 @@ import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/reac
 
 import type { LinksFunction } from '@remix-run/node';
 import stylesheet from '~/tailwind.css?url';
+import NavBar from './components/navbar';
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }];
 
@@ -14,11 +15,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-white border-gray-200 dark:bg-gray-600 p-4">
+        <NavBar />
         {children}
         <ScrollRestoration />
         <Scripts />
-        <p className="text-3xl font-bold">hello world</p>
       </body>
     </html>
   );
