@@ -16,7 +16,7 @@ export default function NavBar({ isDark, setIsDark }: NavBarProps) {
     <nav className="mb-12">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:font-bold hover:underline">
             Sullivan Young
           </span>
         </Link>
@@ -50,19 +50,22 @@ export default function NavBar({ isDark, setIsDark }: NavBarProps) {
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse">
             <li>
-              <NavLink route="/projects" linkName="Projects" />
+              <NavLink route="/" linkName="Home" setIsOpen={setIsOpen} />
             </li>
             <li>
-              <NavLink route="/blog" linkName="Blog" />
+              <NavLink route="/projects" linkName="Projects" setIsOpen={setIsOpen} />
             </li>
             <li>
-              <NavLink route="/contact" linkName="Contact" />
+              <NavLink route="/blog" linkName="Blog" setIsOpen={setIsOpen} />
             </li>
             <li>
-              <NavLink route="/skills" linkName="Skills" />
+              <NavLink route="/contact" linkName="Contact" setIsOpen={setIsOpen} />
             </li>
             <li>
-              <NavLink route="/About" linkName="About" />
+              <NavLink route="/skills" linkName="Skills" setIsOpen={setIsOpen} />
+            </li>
+            <li>
+              <NavLink route="/About" linkName="About" setIsOpen={setIsOpen} />
             </li>
           </ul>
         </div>
