@@ -18,7 +18,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className={`bg-white border-gray-200 p-4 ${isDark ? 'bg-gray-600' : 'bg-white'}`}>
+      <body className={`border-gray-200 p-4 ${isDark ? 'bg-gray-600' : 'bg-white'}`}>
         <NavBar isDark={isDark} setIsDark={setIsDark} />
         {children}
         <ScrollRestoration />
