@@ -16,6 +16,7 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [isDark, setIsDark] = React.useState(true);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <html lang="en">
@@ -26,8 +27,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className={`border-gray-200 p-4 ${isDark ? 'bg-gray-600' : 'bg-white'}`}>
-        <NavBar isDark={isDark} setIsDark={setIsDark} />
-        {children}
+        <NavBar isDark={isDark} setIsDark={setIsDark} isOpen={isOpen} setIsOpen={setIsOpen} />
+        {!isOpen && children}
         <ScrollRestoration />
         <Scripts />
       </body>

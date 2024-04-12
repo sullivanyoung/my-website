@@ -1,16 +1,15 @@
 import { Link } from '@remix-run/react';
-import React from 'react';
 import NavLink from './navlink';
 import { MoonSVG, SunSVG } from './svgs';
 
 interface NavBarProps {
   isDark: boolean;
+  isOpen: boolean;
   setIsDark: (isDark: boolean) => void;
+  setIsOpen: (isOpen: boolean) => void;
 }
 
-export default function NavBar({ isDark, setIsDark }: NavBarProps) {
-  const [isOpen, setIsOpen] = React.useState(false);
-
+export default function NavBar({ isDark, isOpen, setIsDark, setIsOpen }: NavBarProps) {
   return (
     <nav className="mb-12">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
@@ -19,7 +18,7 @@ export default function NavBar({ isDark, setIsDark }: NavBarProps) {
             Sullivan Young
           </span>
         </Link>
-        {/* hiding theme button for now */}
+        {/* TODO: update to allow theming */}
         <button
           type="button"
           className="hidden items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"

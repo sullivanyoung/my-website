@@ -4,13 +4,15 @@ import Resource from '~/components/resource';
 import { GitHubSVG, LinkedInSVG, MediumSVG, ResumeSVG } from '~/components/svgs';
 
 export default function Index() {
-  const downloadResume = () => {
-    console.log('downloading resume');
-  };
-
   return (
     <div className="flex flex-col items-center justify-center">
-      <img src="/paper-airplane.png" alt="paper airplane" width="400" height="500" />
+      <img
+        className="transform scale-100 duration-100 ease-in-out"
+        src="/paper-airplane.png"
+        alt="paper airplane"
+        width="400"
+        height="500"
+      />
       <h1 className="text-center font-bold text-5xl mt-5">Full Stack Engineer</h1>
       <div className="sm:flex justify-between p-4 gap-8">
         <Resource
@@ -18,10 +20,11 @@ export default function Index() {
           resourceSVG={<LinkedInSVG />}
           resourceText={'LinkedIn'}
         />
-        <button className="block hover:bg-gray-500 hover:rounded-xl p-4" onClick={downloadResume}>
-          <ResumeSVG />
-          <p className="text-center">Resume</p>
-        </button>
+        <Resource
+          resourceLink={'SullivanYoungResume.pdf'}
+          resourceSVG={<ResumeSVG />}
+          resourceText={'Resume'}
+        />
         <Resource
           resourceLink={'https://github.com/sullivanyoung'}
           resourceSVG={<GitHubSVG />}
@@ -51,7 +54,7 @@ export default function Index() {
       <div className="border-t-4 border-color-gray-200 w-full" />
       <div className="p-12 w-full">
         <h3 className="text-3xl text-white font-bold ">Medium Blog Posts</h3>
-        <div className="block sm:flex justify-between p-4 gap-8">
+        <div className="flex flex-col items-center sm:flex-row justify-between p-4 gap-8 lg:gap-16">
           <BlogPost
             blogLink={'https://medium.com/@sullivanyoung/what-is-stripe-19f5b046f0b9'}
             blogImage={
