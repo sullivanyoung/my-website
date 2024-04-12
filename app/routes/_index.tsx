@@ -1,4 +1,6 @@
 import { Link } from '@remix-run/react';
+import BlogPost from '~/components/blogPost';
+import Resource from '~/components/resource';
 import { GitHubSVG, LinkedInSVG, MediumSVG, ResumeSVG } from '~/components/svgs';
 
 export default function Index() {
@@ -8,40 +10,28 @@ export default function Index() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <img src="app/images/paper-airplane.png" alt="paper airplane" width="400" height="500" />
+      <img src="/paper-airplane.png" alt="paper airplane" width="400" height="500" />
       <h1 className="text-center font-bold text-5xl mt-5">Full Stack Engineer</h1>
       <div className="sm:flex justify-between p-4 gap-8">
-        <a
-          className="block hover:bg-gray-500 hover:rounded-xl p-4"
-          href="https://www.linkedin.com/in/sullivan-young/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <LinkedInSVG />
-          <p className="text-center">LinkedIn</p>
-        </a>
+        <Resource
+          resourceLink={'https://www.linkedin.com/in/sullivan-young/'}
+          resourceSVG={<LinkedInSVG />}
+          resourceText={'LinkedIn'}
+        />
         <button className="block hover:bg-gray-500 hover:rounded-xl p-4" onClick={downloadResume}>
           <ResumeSVG />
           <p className="text-center">Resume</p>
         </button>
-        <a
-          className="block hover:bg-gray-500 hover:rounded-xl p-4"
-          href="https://github.com/sullivanyoung"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <GitHubSVG />
-          <p className="text-center">GitHub</p>
-        </a>
-        <a
-          className="block hover:bg-gray-500 hover:rounded-xl p-4"
-          href="https://medium.com/@sullivanyoung"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <MediumSVG />
-          <p className="text-center">Medium</p>
-        </a>
+        <Resource
+          resourceLink={'https://github.com/sullivanyoung'}
+          resourceSVG={<GitHubSVG />}
+          resourceText={'GitHub'}
+        />
+        <Resource
+          resourceLink={'https://medium.com/@sullivanyoung'}
+          resourceSVG={<MediumSVG />}
+          resourceText={'Medium'}
+        />
       </div>
       <div className="border-t-4 border-color-gray-200 w-full" />
       <div className="p-12 w-full">
@@ -50,10 +40,9 @@ export default function Index() {
         <p className="font-bold mt-4">
           {`I'm a fullstack engineer with over 3 years of experience. 
             I love challenging myself to try new things and learn as much 
-            as I can about Life, Pyschology, Personal Growth and Development, 
-            Software Engineering, Investing, and more! If I'm not working/learning, 
-            I can be found doing Brazilian Jiu Jitsu, Rock Climbing, or hanging
-            out with friends and family.`}
+            as I can about Life, Software Engineering, Personal Growth and Development,
+            Investing, and more! If I'm not working/learning, I can be found doing Brazilian 
+            Jiu Jitsu, Rock Climbing, or hanging out with friends and family.`}
         </p>
         <Link to="/about">
           <p className="mt-5 text-white text-2xl hover:font-semibold">{'Learn more about me >'}</p>
@@ -62,59 +51,39 @@ export default function Index() {
       <div className="border-t-4 border-color-gray-200 w-full" />
       <div className="p-12 w-full">
         <h3 className="text-3xl text-white font-bold ">Medium Blog Posts</h3>
-        {/* Break out blog posts into reusable components */}
         <div className="block sm:flex justify-between p-4 gap-8">
-          <a
-            href="https://medium.com/@sullivanyoung/what-is-stripe-19f5b046f0b9"
-            target="_blank"
-            rel="noreferrer"
-            className="font-bold text-white text-2xl"
-          >
-            <div className="h-full flex flex-col justify-center border-2 border-white text-center hover:bg-gray-500 rounded-xl p-4">
-              <img
-                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*EWX-2AsYJ5JtKCBR0bY9EA.png"
-                alt="stripe logo"
-                className="mb-4"
-              />
-              What Is Stripe?
-            </div>{' '}
-          </a>
-          <a
-            href="https://medium.com/@sullivanyoung/react-full-dive-the-basics-ef2b858face"
-            target="_blank"
-            rel="noreferrer"
-            className="font-bold text-white text-2xl"
-          >
-            <div className="h-full flex flex-col justify-center  border-2 border-white text-center hover:bg-gray-500 rounded-xl p-4">
-              <img
-                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*IoCLrnfGa9GzPimOovQyDg.png"
-                alt="stripe logo"
-                className="mb-4"
-              />
-              React Full Dive: The Basics
-            </div>
-          </a>
-          <a
-            href="https://medium.com/@sullivanyoung/what-really-is-javascript-origins-and-the-basics-1b4914f355ed"
-            target="_blank"
-            rel="noreferrer"
-            className="font-bold text-white text-2xl"
-          >
-            <div className="h-full flex flex-col justify-center border-2 border-white text-center hover:bg-gray-500 rounded-xl p-4">
-              <img
-                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*wzdbcyGYRmVROsB6GaKSKQ.png"
-                alt="stripe logo"
-                className="mb-4"
-              />
-              What really is JavaScript?
-            </div>{' '}
-          </a>
+          <BlogPost
+            blogLink={'https://medium.com/@sullivanyoung/what-is-stripe-19f5b046f0b9'}
+            blogImage={
+              'https://miro.medium.com/v2/resize:fit:720/format:webp/1*EWX-2AsYJ5JtKCBR0bY9EA.png'
+            }
+            imageText={'stripe logo'}
+            blogText={'What Is Stripe?'}
+          />
+          <BlogPost
+            blogLink={'https://medium.com/@sullivanyoung/react-full-dive-the-basics-ef2b858face'}
+            blogImage={
+              'https://miro.medium.com/v2/resize:fit:720/format:webp/1*IoCLrnfGa9GzPimOovQyDg.png'
+            }
+            imageText={'react logo'}
+            blogText={'React Full Dive: The Basics'}
+          />
+          <BlogPost
+            blogLink={
+              'https://medium.com/@sullivanyoung/what-really-is-javascript-origins-and-the-basics-1b4914f355ed'
+            }
+            blogImage={
+              'https://miro.medium.com/v2/resize:fit:720/format:webp/1*wzdbcyGYRmVROsB6GaKSKQ.png'
+            }
+            imageText={'javascript logo'}
+            blogText={'What really is JavaScript?'}
+          />
         </div>
-        <a href="https://medium.com/@sullivanyoung" target="_blank" rel="noreferrer">
+        <Link to="/blog">
           <p className="mt-5 text-white text-2xl hover:font-semibold">
-            {'Check out more of my articles here >'}
+            {'Check out more of my articles >'}
           </p>
-        </a>
+        </Link>
       </div>
       <div className="border-t-4 border-color-gray-200 w-full" />
       {/* <div className="p-12 w-full">

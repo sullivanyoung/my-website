@@ -5,7 +5,19 @@ import stylesheet from '~/tailwind.css?url';
 import React from 'react';
 import NavBar from './components/navbar';
 
-export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }];
+export const links: LinksFunction = () => [
+  {
+    rel: 'icon',
+    href: '/S.png',
+    type: 'image/png',
+  },
+  {
+    rel: 'paper-airplane',
+    href: '/paper-airplane.png',
+    type: 'image/png',
+  },
+  { rel: 'stylesheet', href: stylesheet },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [isDark, setIsDark] = React.useState(true);

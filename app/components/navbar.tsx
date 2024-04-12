@@ -1,8 +1,7 @@
 import { Link } from '@remix-run/react';
 import React from 'react';
 import NavLink from './navlink';
-import MoonSVG from './svgs/moonSvg';
-import SunSVG from './svgs/sunSvg';
+import { MoonSVG, SunSVG } from './svgs';
 
 interface NavBarProps {
   isDark: boolean;
