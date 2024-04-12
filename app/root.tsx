@@ -11,11 +11,6 @@ export const links: LinksFunction = () => [
     href: '/S.png',
     type: 'image/png',
   },
-  {
-    rel: 'paper-airplane',
-    href: '/paper-airplane.png',
-    type: 'image/png',
-  },
   { rel: 'stylesheet', href: stylesheet },
 ];
 
