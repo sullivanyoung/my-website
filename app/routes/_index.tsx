@@ -8,10 +8,11 @@ export default function Index() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-center font-bold text-5xl">Full Stack Engineer</h1>
-      <div className="flex justify-between p-4 gap-8">
+      <img src="app/images/paper-airplane.png" alt="paper airplane" width="400" height="500" />
+      <h1 className="text-center font-bold text-5xl mt-5">Full Stack Engineer</h1>
+      <div className="sm:flex justify-between p-4 gap-8">
         <a
-          className="hover:bg-gray-500 hover:rounded-xl p-4"
+          className="block hover:bg-gray-500 hover:rounded-xl p-4"
           href="https://www.linkedin.com/in/sullivan-young/"
           target="_blank"
           rel="noreferrer"
@@ -19,12 +20,12 @@ export default function Index() {
           <LinkedInSVG />
           <p className="text-center">LinkedIn</p>
         </a>
-        <button className="hover:bg-gray-500 hover:rounded-xl p-4" onClick={downloadResume}>
+        <button className="block hover:bg-gray-500 hover:rounded-xl p-4" onClick={downloadResume}>
           <ResumeSVG />
           <p className="text-center">Resume</p>
         </button>
         <a
-          className="hover:bg-gray-500 hover:rounded-xl p-4"
+          className="block hover:bg-gray-500 hover:rounded-xl p-4"
           href="https://github.com/sullivanyoung"
           target="_blank"
           rel="noreferrer"
@@ -33,7 +34,7 @@ export default function Index() {
           <p className="text-center">GitHub</p>
         </a>
         <a
-          className="hover:bg-gray-500 hover:rounded-xl p-4"
+          className="block hover:bg-gray-500 hover:rounded-xl p-4"
           href="https://medium.com/@sullivanyoung"
           target="_blank"
           rel="noreferrer"
@@ -44,58 +45,80 @@ export default function Index() {
       </div>
       <div className="border-t-4 border-color-gray-200 w-full" />
       <div className="p-12 w-full">
-        <h2 className="text-3xl text-white p-1">Big sports enthusiast.</h2>
-        <h5 className="text-3xl text-gray-400 p-1">With a big knack for problem solving.</h5>
-        <p className="font-bold p-1">
-          {`I'm a Fullstack Engineer with over 3 years of experience. 
+        <h2 className="text-3xl text-white">Creator of Intangible Things.</h2>
+        <h5 className="text-3xl text-gray-400 mt-1">With a passion for problem solving.</h5>
+        <p className="font-bold mt-4">
+          {`I'm a fullstack engineer with over 3 years of experience. 
             I love challenging myself to try new things and learn as much 
-            as I can. If I'm not working, I can be found doing Brazilian Jiu Jitsu, 
-            Rock Climbing, or hanging out with friends or family.`}
+            as I can about Life, Pyschology, Personal Growth and Development, 
+            Software Engineering, Investing, and more! If I'm not working/learning, 
+            I can be found doing Brazilian Jiu Jitsu, Rock Climbing, or hanging
+            out with friends and family.`}
         </p>
         <Link to="/about">
-          <p className="mt-5 p-1 text-white text-2xl hover:font-semibold">
-            {'Learn more about me >'}
-          </p>
+          <p className="mt-5 text-white text-2xl hover:font-semibold">{'Learn more about me >'}</p>
         </Link>
       </div>
       <div className="border-t-4 border-color-gray-200 w-full" />
       <div className="p-12 w-full">
-        <h3 className="text-3xl text-white font-bold p-1">Medium Blog Posts</h3>
-        <div className="flex justify-between p-4 gap-8">
+        <h3 className="text-3xl text-white font-bold ">Medium Blog Posts</h3>
+        {/* Break out blog posts into reusable components */}
+        <div className="block sm:flex justify-between p-4 gap-8">
           <a
             href="https://medium.com/@sullivanyoung/what-is-stripe-19f5b046f0b9"
             target="_blank"
             rel="noreferrer"
-            className="hover:bg-gray-500 hover:rounded-xl p-4"
+            className="font-bold text-white text-2xl"
           >
-            What Is Stripe?
+            <div className="h-full flex flex-col justify-center border-2 border-white text-center hover:bg-gray-500 rounded-xl p-4">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*EWX-2AsYJ5JtKCBR0bY9EA.png"
+                alt="stripe logo"
+                className="mb-4"
+              />
+              What Is Stripe?
+            </div>{' '}
           </a>
           <a
             href="https://medium.com/@sullivanyoung/react-full-dive-the-basics-ef2b858face"
             target="_blank"
             rel="noreferrer"
-            className="hover:bg-gray-500 hover:rounded-xl p-4"
+            className="font-bold text-white text-2xl"
           >
-            React Full Dive: The Basics
+            <div className="h-full flex flex-col justify-center  border-2 border-white text-center hover:bg-gray-500 rounded-xl p-4">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*IoCLrnfGa9GzPimOovQyDg.png"
+                alt="stripe logo"
+                className="mb-4"
+              />
+              React Full Dive: The Basics
+            </div>
           </a>
           <a
             href="https://medium.com/@sullivanyoung/what-really-is-javascript-origins-and-the-basics-1b4914f355ed"
             target="_blank"
             rel="noreferrer"
-            className="hover:bg-gray-500 hover:rounded-xl p-4"
+            className="font-bold text-white text-2xl"
           >
-            What really is JavaScript?
+            <div className="h-full flex flex-col justify-center border-2 border-white text-center hover:bg-gray-500 rounded-xl p-4">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*wzdbcyGYRmVROsB6GaKSKQ.png"
+                alt="stripe logo"
+                className="mb-4"
+              />
+              What really is JavaScript?
+            </div>{' '}
           </a>
         </div>
         <a href="https://medium.com/@sullivanyoung" target="_blank" rel="noreferrer">
-          <p className="mt-5 p-1 text-white text-2xl hover:font-semibold">
+          <p className="mt-5 text-white text-2xl hover:font-semibold">
             {'Check out more of my articles here >'}
           </p>
         </a>
       </div>
       <div className="border-t-4 border-color-gray-200 w-full" />
-      <div className="p-12 w-full">
-        <h4 className="text-3xl text-white font-bold p-1">Sullivan Young</h4>
+      {/* <div className="p-12 w-full">
+        <h4 className="text-3xl text-white font-bold ">Sullivan Young</h4>
         <div>
           Add Contact Info Here:
           <p>LinkedIn</p>
@@ -109,7 +132,8 @@ export default function Index() {
           <p>Skills</p>
           <p>About</p>
         </div>
-      </div>
+      </div> */}
+      <p className="text-gray-500 font-bold mt-4">All rights reserved © Sullivan Young 2024</p>
     </div>
   );
 }

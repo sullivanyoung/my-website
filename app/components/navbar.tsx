@@ -65,7 +65,7 @@ export default function NavBar({ isDark, setIsDark }: NavBarProps) {
               <NavLink route="/skills" linkName="Skills" setIsOpen={setIsOpen} />
             </li>
             <li>
-              <NavLink route="/About" linkName="About" setIsOpen={setIsOpen} />
+              <NavLink route="/about" linkName="About" setIsOpen={setIsOpen} />
             </li>
           </ul>
         </div>
