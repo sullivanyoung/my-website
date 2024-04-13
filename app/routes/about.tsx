@@ -16,27 +16,31 @@ export default function About() {
             Investing, and more as seen in my Medium articles. If you want to connect, 
             learn more about me, or something else, my socials are linked below.`}
           </p>
-          <div className="flex justify-between p-4 gap-8 flex-col lg:flex-row items-center">
-            <Resource
-              resourceLink={'https://www.linkedin.com/in/sullivan-young/'}
-              resourceSVG={<LinkedInSVG />}
-              resourceText={'LinkedIn'}
-            />
-            <Resource
-              resourceLink={'SullivanYoungResume.pdf'}
-              resourceSVG={<ResumeSVG />}
-              resourceText={'Resume'}
-            />
-            <Resource
-              resourceLink={'https://github.com/sullivanyoung'}
-              resourceSVG={<GitHubSVG />}
-              resourceText={'GitHub'}
-            />
-            <Resource
-              resourceLink={'https://medium.com/@sullivanyoung'}
-              resourceSVG={<MediumSVG />}
-              resourceText={'Medium'}
-            />
+          <div className="flex justify-center lg:gap-16 mt-4 gap-8 flex-row items-center">
+            <div className="lg:flex lg:gap-16">
+              <Resource
+                resourceLink={'https://www.linkedin.com/in/sullivan-young/'}
+                resourceSVG={<LinkedInSVG />}
+                resourceText={'LinkedIn'}
+              />
+              <Resource
+                resourceLink={'SullivanYoungResume.pdf'}
+                resourceSVG={<ResumeSVG />}
+                resourceText={'Resume'}
+              />
+            </div>
+            <div className="lg:flex lg:gap-16">
+              <Resource
+                resourceLink={'https://github.com/sullivanyoung'}
+                resourceSVG={<GitHubSVG />}
+                resourceText={'GitHub'}
+              />
+              <Resource
+                resourceLink={'https://medium.com/@sullivanyoung'}
+                resourceSVG={<MediumSVG />}
+                resourceText={'Medium'}
+              />
+            </div>
           </div>
         </div>
       </section>
