@@ -1,7 +1,7 @@
 export default function Skills() {
   return (
     <div>
-      <p>This is the skills page</p>
+      <p>Welcome to my skills page. WIP</p>
     </div>
   );
 }

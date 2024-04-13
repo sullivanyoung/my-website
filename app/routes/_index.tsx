@@ -1,5 +1,5 @@
 import { Link } from '@remix-run/react';
-import BlogPost from '~/components/blogPost';
+import BlogPost from '~/components/blogPosts';
 import Resource from '~/components/resource';
 import { GitHubSVG, LinkedInSVG, MediumSVG, ResumeSVG } from '~/components/svgs';
 
@@ -53,34 +53,9 @@ export default function Index() {
       </div>
       <div className="border-t-4 border-color-gray-200 w-full" />
       <div className="p-12 w-full">
-        <h3 className="text-3xl text-white font-bold ">Medium Blog Posts</h3>
+        <h3 className="text-3xl text-white font-bold ">Articles</h3>
         <div className="flex flex-col items-center sm:flex-row justify-between p-4 gap-8 lg:gap-16">
-          <BlogPost
-            blogLink={'https://medium.com/@sullivanyoung/what-is-stripe-19f5b046f0b9'}
-            blogImage={
-              'https://miro.medium.com/v2/resize:fit:720/format:webp/1*EWX-2AsYJ5JtKCBR0bY9EA.png'
-            }
-            imageText={'stripe logo'}
-            blogText={'What Is Stripe?'}
-          />
-          <BlogPost
-            blogLink={'https://medium.com/@sullivanyoung/react-full-dive-the-basics-ef2b858face'}
-            blogImage={
-              'https://miro.medium.com/v2/resize:fit:720/format:webp/1*IoCLrnfGa9GzPimOovQyDg.png'
-            }
-            imageText={'react logo'}
-            blogText={'React Full Dive: The Basics'}
-          />
-          <BlogPost
-            blogLink={
-              'https://medium.com/@sullivanyoung/what-really-is-javascript-origins-and-the-basics-1b4914f355ed'
-            }
-            blogImage={
-              'https://miro.medium.com/v2/resize:fit:720/format:webp/1*wzdbcyGYRmVROsB6GaKSKQ.png'
-            }
-            imageText={'javascript logo'}
-            blogText={'What really is JavaScript?'}
-          />
+          <BlogPost numOfPosts={3} />
         </div>
         <Link to="/blog">
           <p className="mt-5 text-white text-2xl hover:font-semibold">

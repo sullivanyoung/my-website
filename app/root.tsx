@@ -26,7 +26,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className={`border-gray-200 p-4 ${isDark ? 'bg-gray-600' : 'bg-white'}`}>
+      <body
+        className={`max-w-screen-xl mx-auto border-gray-200 p-4 ${
+          isDark ? 'bg-gray-600' : 'bg-white'
+        }`}
+      >
         <NavBar isDark={isDark} setIsDark={setIsDark} isOpen={isOpen} setIsOpen={setIsOpen} />
         {!isOpen && children}
         <ScrollRestoration />

@@ -1,7 +1,10 @@
+import BlogPost from '~/components/blogPosts';
+import articles from '~/constants/articles';
+
 export default function Blog() {
   return (
     <div>
-      <p>This is the blog page</p>
+      <BlogPost numOfPosts={articles.length} />
     </div>
   );
 }
