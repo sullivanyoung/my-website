@@ -9,7 +9,7 @@ const projects: Project[] = [
     date: 'April 2024',
     technology: 'Remix, React.js, Tailwind CSS, Vercel',
     description:
-      'This is the project dedicated to the website you are currently viewing. I developed it using Remix so I could learn a new front end tool and wanted to finally build my own website.',
+      'This is the project dedicated to the website you are currently viewing. I developed it using Remix so I could learn a new front end tool and build my own website.',
     type: ProjectType.Personal,
   },
   {
@@ -66,7 +66,7 @@ const projects: Project[] = [
     date: 'November 2021',
     technology: 'React.js, Stripe, Node (Express.js), .NET, Azure',
     description:
-      'Developed a full stack external payment portal that serviced more than 10K users internationally and processed $2.5M in 2023',
+      'Developed a full stack external payment portal that serviced more than 10K users internationally and processed $2.5M in 2023.',
     type: ProjectType.Professional,
   },
   {
