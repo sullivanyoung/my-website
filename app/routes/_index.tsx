@@ -40,15 +40,16 @@ export default function Index() {
       <div className="p-12 w-full">
         <h2 className="text-3xl text-white">Creator of Intangible Things.</h2>
         <h5 className="text-3xl text-gray-400 mt-1">With a passion for problem solving.</h5>
-        <p className="font-bold mt-4">
+        <p className="font-bold mt-4 mb-5">
           {`I'm a fullstack engineer with over 3 years of experience. 
             I love challenging myself to try new things and learn as much 
             as I can about Life, Software Engineering, Personal Growth and Development,
             Investing, and more! If I'm not working/learning, I can be found doing Brazilian 
-            Jiu Jitsu, Rock Climbing, or hanging out with friends and family.`}
+            Jiu-Jitsu, Rock Climbing, or hanging out with friends and family.`}
         </p>
-        <Link to="/about">
-          <p className="mt-5 text-white text-2xl hover:font-semibold">{'Learn more about me >'}</p>
+        <Link to="/about" className="text-white text-2xl hover:font-semibold group relative">
+          {'Learn more about me'}
+          <span className="group-hover:w-full transition-width duration-500 h-0.5 bg-gray-300 absolute bottom-0 left-0 w-0" />
         </Link>
       </div>
       <div className="border-t-4 border-color-gray-200 w-full" />
@@ -57,10 +58,9 @@ export default function Index() {
         <div className="flex flex-col items-center sm:flex-row justify-between p-4 gap-8 lg:gap-16">
           <BlogPost numOfPosts={3} />
         </div>
-        <Link to="/blog">
-          <p className="mt-5 text-white text-2xl hover:font-semibold">
-            {'Check out more of my articles >'}
-          </p>
+        <Link to="/blog" className="text-white text-2xl hover:font-semibold group relative">
+          {'Check out more of my articles'}
+          <span className="group-hover:w-full transition-width duration-500 h-0.5 bg-gray-300 absolute bottom-0 left-0 w-0" />
         </Link>
       </div>
       <div className="border-t-4 border-color-gray-200 w-full" />

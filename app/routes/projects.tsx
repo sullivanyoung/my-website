@@ -18,11 +18,12 @@ export default function Projects() {
             {project.link && (
               <a
                 href={project.link}
-                className="text-gray-300 hover:font-bold"
+                className="text-gray-300 hover:font-bold group relative"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 View on GitHub
+                <span className="group-hover:w-full transition-width duration-500 h-0.5 bg-gray-300 absolute bottom-0 left-0 w-0" />
               </a>
             )}
             <p className="mt-1">{project.description}</p>

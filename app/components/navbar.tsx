@@ -14,8 +14,9 @@ export default function NavBar({ isDark, isOpen, setIsDark, setIsOpen }: NavBarP
     <nav className="mb-12">
       <div className="flex flex-wrap justify-between mx-auto">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:font-bold hover:underline">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:font-bold group relative">
             Sullivan Young
+            <span className="group-hover:w-full transition-width duration-500 h-0.5 bg-white absolute bottom-0 left-0 w-0" />
           </span>
         </Link>
         {/* TODO: update to allow theming */}
@@ -59,9 +60,10 @@ export default function NavBar({ isDark, isOpen, setIsDark, setIsOpen }: NavBarP
             <li>
               <NavLink route="/contact" linkName="Contact" setIsOpen={setIsOpen} />
             </li>
-            <li>
+            {/* TODO: Add Skills Page Back
+             <li>
               <NavLink route="/skills" linkName="Skills" setIsOpen={setIsOpen} />
-            </li>
+            </li> */}
             <li>
               <NavLink route="/about" linkName="About" setIsOpen={setIsOpen} />
             </li>

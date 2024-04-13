@@ -19,11 +19,12 @@ export default function BlogPosts({ numOfPosts }: BlogPostsProps) {
                 <p className="font-bold text-white text-2xl mb-1">{post.title}</p>
                 <a
                   href={post.link}
-                  className="text-gray-300 hover:font-bold"
+                  className="text-gray-300 hover:font-bold group relative"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   View on Medium
+                  <span className="group-hover:w-full transition-width duration-500 h-0.5 bg-gray-300 absolute bottom-0 left-0 w-0" />
                 </a>
               </div>
             </div>
