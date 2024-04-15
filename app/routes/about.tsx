@@ -20,7 +20,7 @@ export default function About() {
     <>
       <section
         ref={ref1}
-        className={`p-12 block lg:flex w-full gap-8transition-opacity ease-in duration-1000 ${
+        className={`p-12 block lg:flex w-full gap-8 transition-opacity ease-in duration-1000 ${
           isVisible1 ? 'opacity-100' : 'opacity-0'
         }`}
       >
