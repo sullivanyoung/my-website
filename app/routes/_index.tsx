@@ -54,7 +54,7 @@ export default function Index() {
       <div className="border-t-4 border-color-gray-200 w-full" />
       <section
         ref={ref2}
-        className={`p-12 w-full transition-opacity ease-in duration-1000 ${
+        className={`p-8 w-full transition-opacity ease-in duration-1000 ${
           isVisible2 ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -77,7 +77,7 @@ export default function Index() {
       <div className="border-t-4 border-color-gray-200 w-full" />
       <section
         ref={ref3}
-        className={`p-12 w-full transition-opacity ease-in duration-1000 ${
+        className={`p-8 w-full transition-opacity ease-in duration-1000 ${
           isVisible3 ? 'opacity-100' : 'opacity-0'
         }`}
       >
