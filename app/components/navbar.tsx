@@ -1,6 +1,6 @@
-import { Link } from '@remix-run/react';
-import NavLink from './navlink';
-import { MoonSVG, SunSVG } from './svgs';
+import { NavLink } from '@remix-run/react';
+import NavLinks from './navlinks';
+// import { MoonSVG, SunSVG } from './svgs';
 
 interface NavBarProps {
   isDark: boolean;
@@ -9,26 +9,28 @@ interface NavBarProps {
   setIsOpen: (isOpen: boolean) => void;
 }
 
-export default function NavBar({ isDark, isOpen, setIsDark, setIsOpen }: NavBarProps) {
+export default function NavBar({ isOpen, setIsOpen }: NavBarProps) {
   return (
     <nav className="mb-12">
       <div className="flex flex-wrap justify-between mx-auto">
-        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white hover:font-bold group relative">
+        <NavLink to="/" className="flex items-center">
+          <span className="text-2xl font-bold whitespace-nowrap text-white group relative">
             Sullivan Young
             <span className="group-hover:w-full transition-width duration-500 h-0.5 bg-white absolute bottom-0 left-0 w-0" />
           </span>
-        </Link>
+        </NavLink>
         {/* TODO: update to allow theming */}
-        <button
+        {/* <button
           type="button"
-          className="hidden items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="hidden items-center p-2 w-10 h-10 justify-center text-sm
+          text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2
+           focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-expanded="false"
           onClick={() => setIsDark(!isDark)}
           aria-label="open menu"
         >
           {isDark ? <MoonSVG /> : <SunSVG />}
-        </button>
+        </button> */}
         <button
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -49,23 +51,23 @@ export default function NavBar({ isDark, isOpen, setIsDark, setIsOpen }: NavBarP
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse">
             <li>
-              <NavLink route="/" linkName="Home" setIsOpen={setIsOpen} />
+              <NavLinks route="/" linkName="Home" setIsOpen={setIsOpen} />
             </li>
             <li>
-              <NavLink route="/projects" linkName="Projects" setIsOpen={setIsOpen} />
+              <NavLinks route="/projects" linkName="Projects" setIsOpen={setIsOpen} />
             </li>
             <li>
-              <NavLink route="/blog" linkName="Blog" setIsOpen={setIsOpen} />
+              <NavLinks route="/blog" linkName="Blog" setIsOpen={setIsOpen} />
             </li>
             <li>
-              <NavLink route="/contact" linkName="Contact" setIsOpen={setIsOpen} />
+              <NavLinks route="/contact" linkName="Contact" setIsOpen={setIsOpen} />
             </li>
             {/* TODO: Add Skills Page Back
              <li>
               <NavLink route="/skills" linkName="Skills" setIsOpen={setIsOpen} />
             </li> */}
             <li>
-              <NavLink route="/about" linkName="About" setIsOpen={setIsOpen} />
+              <NavLinks route="/about" linkName="About" setIsOpen={setIsOpen} />
             </li>
           </ul>
         </div>

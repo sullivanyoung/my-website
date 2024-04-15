@@ -17,7 +17,7 @@ export default function Projects() {
     >
       {projects.map((project: Project) => (
         <li key={project.id} className="mb-4">
-          <div className="p-4 border-2 border-white rounded-lg mx-12">
+          <div className="p-4 border-2 border-white rounded-lg mx-auto sm:mx-12">
             <div className="sm:flex justify-between mb-2">
               <p className="font-bold text-white text-2xl">{project.title}</p>
               <p className="text-white mt-2 sm:mt-0 font-semibold">{project.date}</p>
