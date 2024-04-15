@@ -1,46 +1,66 @@
 import { Link } from '@remix-run/react';
+import React from 'react';
 import BlogPost from '~/components/blogPosts';
 import Resource from '~/components/resource';
 import { GitHubSVG, LinkedInSVG, MediumSVG, ResumeSVG } from '~/components/svgs';
+import useIsVisible from '~/hooks/useIsVisible';
 
 export default function Index() {
+  // Top Section
+  const ref1 = React.useRef(null);
+  const isVisible1 = useIsVisible(ref1);
+
+  // About Me Section
+  const ref2 = React.useRef(null);
+  const isVisible2 = useIsVisible(ref2);
+
+  // Article Section
+  const ref3 = React.useRef(null);
+  const isVisible3 = useIsVisible(ref3);
+
   return (
-    <div className="flex flex-col items-center justify-center">
-      <img
-        className="transform scale-100 duration-100 ease-in-out"
-        src="/paper-airplane.png"
-        alt="paper airplane"
-        width="400"
-        height="500"
-      />
-      <h1 className="text-center font-bold text-5xl mt-5">Full Stack Engineer</h1>
-      <div className="sm:flex justify-between p-4 gap-8">
-        <Resource
-          resourceLink={'https://www.linkedin.com/in/sullivan-young/'}
-          resourceSVG={<LinkedInSVG />}
-          resourceText={'LinkedIn'}
-        />
-        <Resource
-          resourceLink={'SullivanYoungResume.pdf'}
-          resourceSVG={<ResumeSVG />}
-          resourceText={'Resume'}
-        />
-        <Resource
-          resourceLink={'https://github.com/sullivanyoung'}
-          resourceSVG={<GitHubSVG />}
-          resourceText={'GitHub'}
-        />
-        <Resource
-          resourceLink={'https://medium.com/@sullivanyoung'}
-          resourceSVG={<MediumSVG />}
-          resourceText={'Medium'}
-        />
-      </div>
+    <>
+      <section
+        ref={ref1}
+        className={`flex flex-col items-center my-20 justify-center transition-opacity ease-in duration-1000 ${
+          isVisible1 ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <img src="/paper-airplane.png" alt="paper airplane" width="400" height="500" />
+        <h1 className="text-center font-bold text-5xl mt-5">Full Stack Engineer</h1>
+        <div className="sm:flex justify-between p-4 gap-8">
+          <Resource
+            resourceLink={'https://www.linkedin.com/in/sullivan-young/'}
+            resourceSVG={<LinkedInSVG />}
+            resourceText={'LinkedIn'}
+          />
+          <Resource
+            resourceLink={'SullivanYoungResume.pdf'}
+            resourceSVG={<ResumeSVG />}
+            resourceText={'Resume'}
+          />
+          <Resource
+            resourceLink={'https://github.com/sullivanyoung'}
+            resourceSVG={<GitHubSVG />}
+            resourceText={'GitHub'}
+          />
+          <Resource
+            resourceLink={'https://medium.com/@sullivanyoung'}
+            resourceSVG={<MediumSVG />}
+            resourceText={'Medium'}
+          />
+        </div>
+      </section>
       <div className="border-t-4 border-color-gray-200 w-full" />
-      <div className="p-12 w-full">
-        <h2 className="text-3xl text-white">Creator of Intangible Things.</h2>
-        <h5 className="text-3xl text-gray-400 mt-1">With a passion for problem solving.</h5>
-        <p className="font-bold mt-4 mb-5">
+      <section
+        ref={ref2}
+        className={`p-12 w-full transition-opacity ease-in duration-1000 ${
+          isVisible2 ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <h2 className="text-3xl text-white mt-4">Creator of Intangible Things.</h2>
+        <h5 className="text-3xl text-gray-400 mt-4">With a passion for problem solving.</h5>
+        <p className="font-bold my-5">
           {`I'm a fullstack engineer with over 3 years of experience. 
             I love challenging myself to try new things and learn as much 
             as I can about Life, Software Engineering, Personal Growth and Development,
@@ -51,10 +71,15 @@ export default function Index() {
           {'Learn more about me'}
           <span className="group-hover:w-full transition-width duration-500 h-0.5 bg-gray-300 absolute bottom-0 left-0 w-0" />
         </Link>
-      </div>
+      </section>
       <div className="border-t-4 border-color-gray-200 w-full" />
-      <div className="p-12 w-full">
-        <h3 className="text-3xl text-white font-bold ">Articles</h3>
+      <section
+        ref={ref3}
+        className={`p-12 w-full transition-opacity ease-in duration-1000 ${
+          isVisible3 ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <h3 className="text-3xl text-white font-bold my-4">Articles</h3>
         <div className="flex flex-col items-center sm:flex-row justify-between p-4 gap-8 lg:gap-16">
           <BlogPost numOfPosts={3} />
         </div>
@@ -62,7 +87,7 @@ export default function Index() {
           {'Check out more of my articles'}
           <span className="group-hover:w-full transition-width duration-500 h-0.5 bg-gray-300 absolute bottom-0 left-0 w-0" />
         </Link>
-      </div>
+      </section>
       <div className="border-t-4 border-color-gray-200 w-full" />
       {/* <div className="p-12 w-full">
         <h4 className="text-3xl text-white font-bold ">Sullivan Young</h4>
@@ -80,7 +105,9 @@ export default function Index() {
           <p>About</p>
         </div>
       </div> */}
-      <p className="text-gray-500 font-bold mt-4">All rights reserved © Sullivan Young 2024</p>
-    </div>
+      <p className="text-center text-gray-500 font-bold mt-4">
+        All rights reserved © Sullivan Young 2024
+      </p>
+    </>
   );
 }

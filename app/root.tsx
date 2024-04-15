@@ -12,6 +12,10 @@ export const links: LinksFunction = () => [
     type: 'image/png',
   },
   { rel: 'stylesheet', href: stylesheet },
+  {
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -27,7 +31,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body
-        className={`max-w-screen-xl mx-auto border-gray-200 p-4 ${
+        className={`max-w-screen-xl font-sans mx-auto border-gray-200 p-4 ${
           isDark ? 'bg-gray-600' : 'bg-white'
         }`}
       >

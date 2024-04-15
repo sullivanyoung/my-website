@@ -13,7 +13,7 @@ export default function Resource({ resourceLink, resourceSVG, resourceText }: Re
       rel="noopener noreferrer"
     >
       {resourceSVG}
-      <p className="text-center">{resourceText}</p>
+      <p className="text-center font-semibold">{resourceText}</p>
     </a>
   );
 }
