@@ -59,13 +59,15 @@ export default function Index() {
         }`}
       >
         <h2 className="text-3xl text-white mt-4">Creator of Intangible Things.</h2>
-        <h5 className="text-3xl text-gray-400 mt-4">With a passion for problem solving.</h5>
+        <h5 className="text-3xl text-gray-400 mt-4">Dedicated to problem solving.</h5>
         <p className="font-bold my-5">
-          {`I'm a fullstack engineer with over 3 years of experience. 
-            I love challenging myself to try new things and learn as much 
-            as I can about Life, Software Engineering, Personal Growth and Development,
-            Investing, and more! If I'm not working/learning, I can be found doing Brazilian 
-            Jiu-Jitsu, Rock Climbing, or hanging out with friends and family.`}
+          {`As a seasoned full-stack engineer with over three years of experience, 
+          I thrive on pushing my boundaries and exploring new horizons. My 
+          curiosity drives me to delve deep into various domains, from software 
+          engineering and personal growth to investing and beyond. When I'm not 
+          immersed in work or expanding my knowledge base, you'll often find me 
+          grappling on the mats of a Brazilian Jiu-Jitsu studio, scaling the heights
+          of a rock-climbing wall, or simply enjoying quality time with loved ones.`}
         </p>
         <Link to="/about" className="text-white text-2xl hover:font-semibold group relative">
           {'Learn more about me'}

@@ -29,11 +29,11 @@ export default function About() {
           <h2 className="text-3xl text-white text-left">About Me</h2>
           <h5 className="text-3xl text-gray-400 my-4">Full Stack Software Engineer</h5>
           <p className="font-bold mt-4">
-            {`I'm a fullstack engineer with over 3 years of experience and many more to come. 
-            I love challenging myself to try new things and learn as much 
-            as I can about Life, Software Engineering, Personal Growth and Development,
-            Investing, and more as seen in my Medium articles. If you want to connect, 
-            learn more about me, or something else, my socials are linked below.`}
+            {`As an experienced full-stack engineer with a passion for continuous learning
+            and growth, I thrive on embracing challenges and exploring diverse domains,
+            including software engineering, personal development, investing, and beyond,
+            as reflected in my Medium articles. Feel free to connect with me 
+            or explore further through my social channels linked below:`}
           </p>
           <div className="flex justify-center lg:gap-16 mt-4 gap-8 flex-row items-center">
             <div className="lg:flex lg:gap-16">
@@ -82,11 +82,11 @@ export default function About() {
             <span className="group-hover:w-full transition-width duration-500 h-0.5 bg-gray-300 absolute bottom-0 left-0 w-0" />
           </a>
           <p className="font-bold my-5">
-            {`I was born in 1998 in Richmond, Virginia. I graduated from Goochland High School in 2016 and 
-            went on to attend the University of North Carolina Wilmington. I graduated from UNC Wilmington in 2020 
-            with a degree in Business Administration and dual concentration of Management Information 
-            Systems and Business Analytics. From there, I moved back to Richmond where I got my Masters
-            in Information Systems at Virginia Commonwealth University in 2023.`}
+            {`Born in 1998 in Richmond, Virginia, I started on my educational journey by graduating from Goochland High School in 2016.
+            I went on to attend the University of North Carolina Wilmington where I graduated in 2020 
+            with a Bachelors in Business Administration and dual concentration of Management Information 
+            Systems and Business Analytics. After graduating, I returned to Richmond to pursue a Masters 
+            in Information Systems at Virginia Commonwealth University, completing my studies in 2023.`}
           </p>
         </div>
         <img src="/dog.jpg" alt="headshot" className="h-96 mx-auto rounded-md" />
@@ -102,14 +102,21 @@ export default function About() {
         <div>
           <h2 className="text-3xl text-white">Life, Hobbies, and More...</h2>
           <p className="font-bold mt-4">
-            {`If I'm not coding, I'm probably out and about being active somewhere! Throughout my entire childhood, I was an avid soccer 
-            player and played for the Richmond Kickers. During college, I was
-            on the club volleyball team for all 4 years and played in numerous indoor and sand tournaments.
-            After graduating from college during the peak of COVID, I quickly realized just how important exercise is for both my mental and physical health.
-            Flash forward a few years later and I discovered the wonderful sports of
-            rock climbing and Brazilian jiu-jitsu. The past few years, I've loved the puzzle aspect of both of
-            these sports and can often be found in one of those two gyms in Richmond. If I'm not doing one of those two things (which is rare), I'm probably
-            hanging out with friends, family, playing disc golf, or on some new adventure!`}
+            {`Beyond coding, you'll often find me immersed in various physical activities. 
+            As a child, I thrived as a dedicated soccer player, proudly representing the
+            Richmond Kickers for most of my adolescence. Throughout my college years, I 
+            indulged my competitive spirit as a member of the club volleyball team, 
+            engaging in numerous indoor and sand tournaments. The onset of the COVID era 
+            following my graduation from college in 2020 underscored the importance 
+            of exercise for both my mental and physical well-being.`}
+          </p>
+          <p className="font-bold mt-2">
+            {`Fast forward to recent years, I've embraced new challenges in rock climbing and Brazilian
+            jiu-jitsu. Whether scaling the walls of a climbing gym or grappling on the mats of a jiu-jitsu 
+            academy in Richmond, I find solace in the puzzle-like nature of these pursuits. When I'm not engaging 
+            these passions (which is a rare occurrence), you might catch me socializing with 
+            friends and family, honing my skills in disc golf (still subpar), or embarking on exciting new 
+            adventures!`}
           </p>
         </div>
       </section>
