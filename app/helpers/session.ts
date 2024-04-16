@@ -14,5 +14,7 @@ export const { getSession, commitSession, destroySession } = createCookieSession
 >({
   cookie: {
     name: '__session',
+    secrets: ['s3cret1'],
+    maxAge: 60,
   },
 });
