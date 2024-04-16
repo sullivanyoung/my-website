@@ -1,8 +1,4 @@
-/**
- * This is intended to be a basic starting point for linting in your app.
- * It relies on recommended configs out of the box for simplicity, but you can
- * and should modify this configuration to best suit your team's needs.
- */
+import stylisticJs from '@stylistic/eslint-plugin-js';
 
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
@@ -14,6 +10,9 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
+  },
+  plugins: {
+    '@stylistic/js': stylisticJs,
   },
   env: {
     browser: true,
@@ -31,6 +30,7 @@ module.exports = {
     'object-curly-newline': 'off',
     'no-confusing-arrow': 'off',
     'implicit-arrow-linebreak': 'off',
+    '@stylistic/js/indent': ['error', 2],
   },
 
   overrides: [

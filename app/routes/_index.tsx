@@ -82,7 +82,7 @@ export default function Index() {
         }`}
       >
         <h3 className="text-3xl text-white font-bold my-4">Articles</h3>
-        <div className="flex flex-col items-center sm:flex-row justify-between p-4 gap-8 lg:gap-16">
+        <div className="flex flex-col items-center sm:flex-row justify-between gap-8 lg:gap-16">
           <BlogPost numOfPosts={3} />
         </div>
         <Link to="/blog" className="text-white text-2xl hover:font-semibold group relative">
