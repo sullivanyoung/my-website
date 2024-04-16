@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 import {
   EMAILJS_ACCESS_TOKEN,
   EMAILJS_SERVICE_ID,
