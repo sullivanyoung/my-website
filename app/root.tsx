@@ -1,4 +1,4 @@
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useRouteError } from '@remix-run/react';
 
 import type { LinksFunction } from '@remix-run/node';
 import stylesheet from '~/tailwind.css?url';
@@ -46,4 +46,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return <Outlet />;
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+  console.error(error);
+  return (
+    <html>
+      <head>
+        <title>Oh no!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <div className="flex justify-center text-2xl mt-20 text-white font-bold">
+          Sorry, something appears to have gone wrong...
+        </div>
+        <Scripts />
+      </body>
+    </html>
+  );
 }
