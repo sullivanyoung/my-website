@@ -17,3 +17,11 @@ export type Article = {
   link: string;
   image: string;
 };
+
+export type SpotifyItem = {
+  albumImages: string[];
+  artists: string[];
+  externalUrl: string;
+  name: string;
+  profileUrl: string;
+};

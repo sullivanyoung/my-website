@@ -1,9 +1,20 @@
+import { json, useLoaderData } from '@remix-run/react';
 import React from 'react';
+import { getRecentlyPlayedSpotifySong } from '~/api/spotify';
 import Resource from '~/components/resource';
+import SpotifySong from '~/components/spotify';
 import { GitHubSVG, LinkedInSVG, MediumSVG, ResumeSVG } from '~/components/svgs';
 import useIsVisible from '~/hooks/useIsVisible';
 
+export async function loader() {
+  const spotifySong = await getRecentlyPlayedSpotifySong();
+
+  return json({ spotifySong });
+}
+
 export default function About() {
+  const { spotifySong } = useLoaderData<typeof loader>();
+
   // About Me Section
   const ref1 = React.useRef(null);
   const isVisible1 = useIsVisible(ref1);
@@ -25,7 +36,7 @@ export default function About() {
         }`}
       >
         <img src="/headshot.jpg" alt="headshot" className="h-96 mb-4 mx-auto rounded-md" />
-        <div>
+        <div className="relative">
           <h2 className="text-3xl text-white text-left">About Me</h2>
           <h5 className="text-3xl text-gray-400 my-4">Full Stack Software Engineer</h5>
           <p className="font-bold mt-4">
@@ -35,6 +46,7 @@ export default function About() {
             as reflected in my Medium articles. Feel free to connect with me 
             or explore further through my social channels linked below:`}
           </p>
+          {spotifySong && <SpotifySong spotifySong={spotifySong} />}
           <div className="flex justify-center lg:gap-16 mt-4 gap-8 flex-row items-center">
             <div className="lg:flex lg:gap-16">
               <Resource
