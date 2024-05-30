@@ -59,9 +59,9 @@ export default function NavBar({ isOpen, setIsOpen }: NavBarProps) {
             <li>
               <NavLinks route="/blog" linkName="Blog" setIsOpen={setIsOpen} />
             </li>
-            <li>
+            {/* <li>
               <NavLinks route="/contact" linkName="Contact" setIsOpen={setIsOpen} />
-            </li>
+            </li> */}
             {/* TODO: Add Skills Page Back
              <li>
               <NavLink route="/skills" linkName="Skills" setIsOpen={setIsOpen} />
